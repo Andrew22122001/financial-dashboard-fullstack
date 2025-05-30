@@ -1,0 +1,37 @@
+<h2>Financial Transactions</h2>
+
+<!-- Add Form -->
+<div>
+  <input [(ngModel)]="newTransaction.fundName" placeholder="Fund Name">
+  <input [(ngModel)]="newTransaction.type" placeholder="Type">
+  <input [(ngModel)]="newTransaction.amount" type="number" placeholder="Amount">
+  <input [(ngModel)]="newTransaction.role" placeholder="Role">
+  <button (click)="addTransaction()">Add</button>
+</div>
+
+<br>
+<table border="1" cellpadding="8">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Fund Name</th>
+      <th>Type</th>
+      <th>Amount ($)</th>
+      <th>Role</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let tx of transactions">
+      <td>{{ tx.id }}</td>
+      <td><input [(ngModel)]="tx.fundName"></td>
+      <td><input [(ngModel)]="tx.type"></td>
+      <td><input [(ngModel)]="tx.amount" type="number"></td>
+      <td><input [(ngModel)]="tx.role"></td>
+      <td>
+        <button (click)="updateTransaction(tx)">Update</button>
+        <button (click)="deleteTransaction(tx.id!)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
