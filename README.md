@@ -28,64 +28,117 @@ A responsive full-stack application that enables users to manage financial fund 
 
 ## 📁 Project Structure
 
+```
 financial-dashboard/
-├── backend/ # Spring Boot backend
-│ ├── src/
-│ ├── pom.xml
-│ └── application.properties
+├── backend/                            # Spring Boot backend
+│   ├── src/
+│   ├── pom.xml
+│   └── application.properties
 │
-├── financial-dashboard-frontend/ # Angular frontend
-│ ├── src/
-│ │ ├── app/
-│ │ │ ├── components/
-│ │ │ │ └── dashboard/
-│ │ │ ├── models/
-│ │ │ ├── services/
-│ │ │ └── app.routes.ts
-│ ├── angular.json
-│ └── package.json
+├── financial-dashboard-frontend/      # Angular frontend
+│   ├── src/
+│   │   ├── app/
+│   │   │   ├── components/
+│   │   │   │   └── dashboard/
+│   │   │   ├── models/
+│   │   │   ├── services/
+│   │   │   └── app.routes.ts
+│   ├── angular.json
+│   └── package.json
 │
 └── README.md
-
+```
 
 ---
 
 ## 🔧 Backend Setup
 
-1. **Navigate to the backend folder**:
-   ```bash
-   cd backend
-Configure application.properties:
+1. Navigate to the backend folder:
+
+```bash
+cd backend
+```
+
+2. Configure `application.properties`:
+
+```properties
 spring.datasource.url=jdbc:postgresql://localhost:5432/financialdb
 spring.datasource.username=your_username
 spring.datasource.password=your_password
 spring.jpa.hibernate.ddl-auto=update
-Start the backend server:
+```
+
+3. Start the backend server:
+
+```bash
 ./mvnw spring-boot:run
-API Base URL:
-http://localhost:8080/api/transactions
-🌐 Frontend Setup
+```
 
-Navigate to frontend folder:
+📎 API Base URL: [http://localhost:8080/api/transactions](http://localhost:8080/api/transactions)
+
+---
+
+## 🌐 Frontend Setup
+
+1. Navigate to frontend folder:
+
+```bash
 cd financial-dashboard-frontend
-Install dependencies:
-npm install
-Start Angular app:
-ng serve
-Open your browser:
-http://localhost:4200
-🧪 Sample Data for POST (JSON)
+```
 
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Start Angular app:
+
+```bash
+ng serve
+```
+
+🔗 Open your browser: [http://localhost:4200](http://localhost:4200)
+
+---
+
+## 🧪 Sample Data for POST (JSON)
+
+```json
 {
   "fundName": "Growth Fund Alpha",
   "type": "Buy",
   "amount": 1200,
   "role": "Admin"
 }
-You can use Postman or the Angular form to post this data to /api/transactions.
+```
 
-📌 Author
+You can use [Postman](https://www.postman.com/) or the Angular form to post this data to `/api/transactions`.
 
-Andrew Bala Abhilash Polisetty
-🔗 LinkedIn
-📘 MS in Computer Science, Kennesaw State University
+---
+
+## 🖼️ Screenshots
+
+> *Add screenshots of your frontend UI here if available.*
+
+---
+
+## 🗂️ Future Improvements
+
+- Add pagination and filtering
+- Role-based user login
+- Export transactions as CSV
+
+---
+
+## 📌 Author
+
+**Andrew Bala Abhilash Polisetty**  
+🔗 [LinkedIn](https://www.linkedin.com/in/andrewpolisetty)  
+🎓 MS in Computer Science, Kennesaw State University
+
+---
+
+## 📃 License
+
+This project is open-source under the MIT License.
