@@ -117,19 +117,7 @@ You can use [Postman](https://www.postman.com/) or the Angular form to post this
 
 ---
 
-## 🖼️ Screenshots
 
-> *Add screenshots of your frontend UI here if available.*
-
----
-
-## 🗂️ Future Improvements
-
-- Add pagination and filtering
-- Role-based user login
-- Export transactions as CSV
-
----
 
 ## 📌 Author
 
